@@ -34,10 +34,7 @@ RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1 
 # Update the symbolic link for python to point to python3
 RUN ln -sf /usr/bin/python3 /usr/bin/python
 
-# Verify installation
-RUN python --version
-RUN python3 --version
-RUN pip --version
+
 # copy requirements file and and install
 COPY ./requirements.txt /opt/
 RUN pip3 install --no-cache-dir -r /opt/requirements.txt
@@ -57,9 +54,10 @@ ENV PYTHONDONTWRITEBYTECODE=TRUE
 ENV PATH="/opt/src:${PATH}"
 ENV TORCH_HOME="/opt"
 ENV MPLCONFIGDIR="/opt"
+ENV JUPYTER_CONFIG_DIR="/opt"
+ENV IPYTHONDIR="/opt"
 
 RUN chown -R 1000:1000 /opt
-
 RUN chmod -R 777 /opt
 
 # set non-root user
@@ -68,4 +66,3 @@ USER 1000
 
 ENTRYPOINT ["/opt/entry_point.sh"]
 
-# ENTRYPOINT [ "/bin/bash" ]
