@@ -13,14 +13,14 @@ case $command in
   # If the command is "train", run the train.py script with all remaining arguments
   train)
   {
-    jupyter nbconvert --to python  --execute train.ipynb 2>/dev/null
+    jupyter nbconvert --to python  --execute train.ipynb
   }
     ;;
 
   # If the command is "predict", run the predict.py script with all remaining arguments
   predict)
   {
-    jupyter nbconvert --to python  --execute predict.ipynb 2>/dev/null
+    jupyter nbconvert --to python  --execute predict.ipynb
   }
     ;;
 

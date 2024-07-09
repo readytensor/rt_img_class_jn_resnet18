@@ -65,4 +65,7 @@ RUN chmod -R 777 /opt
 # set non-root user
 USER 1000
 # set entrypoint
+
 ENTRYPOINT ["/opt/entry_point.sh"]
+
+# ENTRYPOINT [ "/bin/bash" ]
