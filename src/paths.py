@@ -17,11 +17,11 @@ TRAIN_DIR = os.path.join(INPUT_DIR, "training")
 TEST_DIR = os.path.join(INPUT_DIR, "testing")
 
 # Path to the file containing model weights
-MODEL_PATH = os.path.join(MODEL_INPUTS_OUTPUTS, "model", "artifacts", "model.pth")
+MODEL_PATH = os.path.join(MODEL_INPUTS_OUTPUTS, "model", "model.pth")
 
 # Path to the file containing model parameters
 MODEL_PARAMS_PATH = os.path.join(
-    MODEL_INPUTS_OUTPUTS, "model", "artifacts", "params.json"
+    MODEL_INPUTS_OUTPUTS, "model", "params.json"
 )
 
 # Path to the file containing model predictions
